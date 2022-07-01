@@ -84,7 +84,7 @@ with st.sidebar:st.caption('Select options for viewing, either inspecting each s
 chartGrouping = st.sidebar.selectbox('Aggregate?', choice_dict.keys())
 chartMetric = st.sidebar.radio('Choose Option', choice_dict[chartGrouping])
 with st.sidebar:st.markdown("""---""")
-chartSample = st.sidebar.radio('Sampling Rate', ['Quarterly','Monthly','Weekly'])
+chartSample = st.sidebar.radio('Sampling Rate', ['Weekly','Monthly','Quarterly'])
 
 
 #Process options now via the dictionaries, add in the date to allow for resampling across the time period
@@ -140,5 +140,3 @@ with scol2:
     st.plotly_chart(px.bar(nstaffmean, x=nstaffmean.index, y='Recommend', title='Likelihood to Recommend (mean) vs. Number of Facilitators', labels={'NumStaff':'Number of Facilitators', 'Recommend':'Liklihood to Recommend (mean)'}))
 
 st.markdown("""---""")
-
-#3+5

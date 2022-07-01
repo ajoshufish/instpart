@@ -2,4 +2,4 @@ gspread
 pandas
 plotly_express
 numpy
-plotly.graph_objects
+plotly
